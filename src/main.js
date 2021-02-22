@@ -9,6 +9,10 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI)
 
+// 导入 vue-bus
+import VueBus from 'vue-bus'
+Vue.use(VueBus)
+
 Vue.config.productionTip = false
 
 new Vue({

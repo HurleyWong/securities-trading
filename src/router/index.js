@@ -21,7 +21,12 @@ const routes = [
         path: '/dashboard',
         name: 'Dashboard',
         component: () => import('../views/Dashboard.vue'),
-      }
+      },
+      {
+        path: '/pwdsetting',
+        name: 'PwdSetting',
+        component: () => import('../views/PwdSetting.vue'),
+      },
     ]
   },
 

@@ -37,14 +37,16 @@ export default {
     };
   },
   methods: {
+    // 侧边栏折叠
     collapseChange() {
-      this.collapse = !this.collapse
-    }
-  }
+      this.collapse = !this.collapse;
+      this.$bus.emit("collapse", this.collapse)
+    },
+  },
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .header {
   position: relative;
   box-sizing: border-box;
