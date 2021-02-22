@@ -1,15 +1,31 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+
 
 Vue.use(VueRouter)
 
 const routes = [
   {
+    // 默认跳转地址
+    path: '/',
+    name: 'Login',
+    component: () => import('../views/Login.vue'),
+  },
+  {
+    // 默认跳转地址
     path: '/',
     name: 'Home',
-    component: Home
+    component: () => import('../views/Home.vue'),
+    children: [
+      {
+        path: '/dashboard',
+        name: 'Dashboard',
+        component: () => import('../views/Dashboard.vue'),
+      }
+    ]
   },
+
+
   {
     path: '/about',
     name: 'About',
