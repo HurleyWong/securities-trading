@@ -26,6 +26,13 @@ const routes = [
         path: '/pwdsetting',
         name: 'PwdSetting',
         component: () => import('../views/PwdSetting.vue'),
+        meta: {requiredAuth: false},
+      },
+      {
+        path: '/transfer',
+        name: 'Transfer',
+        component: () => import('../views/Transfer.vue'),
+        meta: {requiredAuth: false},
       },
     ]
   },
@@ -55,6 +62,22 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
+})
+
+// 路由拦截器
+router.beforeEach((to, from, next) => {
+  // 前往的页面是否需要身份认证
+  if (to.meta.requiredAuth) {
+    if (Boolean(sessionStorage.getItem("uid"))) {
+      next();
+    } else {
+      next({
+        path: '/',
+      })
+    }
+  } else {
+    next();
+  }
 })
 
 export default router

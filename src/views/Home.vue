@@ -9,14 +9,16 @@
     <!-- 显示子页面 -->
     <div class="content-box" :class="{ 'content-collapse': collapse }">
       <div class="content">
-        <router-view></router-view>
+        <transition name="mode" mode="out-in">
+          <router-view></router-view>
+        </transition>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-// 这么命名是为了防止和html本身的标签起冲突
+// 这么命名是为了防止和 html 本身的标签起冲突
 import vHeader from "../components/Header";
 import vSidebar from "../components/Sidebar";
 
