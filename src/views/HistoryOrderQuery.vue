@@ -4,23 +4,26 @@
     <div class="crumbs">
       <el-breadcrumb separator="/">
         <el-breadcrumb-item separator="/">
-          <i class="el-icon-baseball"></i> 资金股份
+          <i class="el-icon-s-order"></i> 查询
         </el-breadcrumb-item>
+
+        <el-breadcrumb-item>历史委托</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
 
-    <el-card class="container">
-      <post-list />
+    <el-card shadow="hover" class="container">
+      <history-order-list />
     </el-card>
   </div>
 </template>
 
 <script>
-import PostList from "../components/PostList.vue";
+import HistoryOrderList from "../components/HistoryOrderList";
+
 export default {
-  name: "Dashboard",
+  name: "HistoryOrderQuery",
   components: {
-    PostList,
+    HistoryOrderList,
   },
 };
 </script>

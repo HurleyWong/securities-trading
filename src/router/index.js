@@ -34,6 +34,18 @@ const routes = [
         component: () => import('../views/Transfer.vue'),
         meta: {requiredAuth: false},
       },
+      {
+        path: '/orderquery',
+        name: '/OrderQuery',
+        component: () => import('../views/OrderQuery.vue'),
+        meta: {requiredAuth: false},
+      },
+      {
+        path: '/historyorderquery',
+        name: '/HistoryOrderQuery',
+        component: () => import('../views/HistoryOrderQuery.vue'),
+        meta: {requiredAuth: false},
+      },
     ]
   },
 

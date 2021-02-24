@@ -4,23 +4,26 @@
     <div class="crumbs">
       <el-breadcrumb separator="/">
         <el-breadcrumb-item separator="/">
-          <i class="el-icon-baseball"></i> 资金股份
+          <i class="el-icon-baseball"></i> 查询
         </el-breadcrumb-item>
+
+        <el-breadcrumb-item>当日委托</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
 
-    <el-card class="container">
-      <post-list />
+    <el-card shadow="hover" class="container">
+      <order-list />
     </el-card>
   </div>
 </template>
 
 <script>
-import PostList from "../components/PostList.vue";
+import OrderList from "../components/OrderList";
+
 export default {
-  name: "Dashboard",
+  name: "OrderQuery",
   components: {
-    PostList,
+    OrderList,
   },
 };
 </script>

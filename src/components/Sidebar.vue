@@ -74,7 +74,7 @@ export default {
               title: "当日成交",
             },
             {
-              index: "hisorderquery",
+              index: "historyorderquery",
               title: "历史委托",
             },
             {
@@ -109,7 +109,7 @@ export default {
   },
   computed: {
     onRoutes() {
-      return this.$route.path.replace('/', '');
+      return this.$route.path.replace("/", "");
     },
   },
   methods: {
