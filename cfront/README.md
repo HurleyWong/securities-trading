@@ -20,10 +20,6 @@
 
 利用 vue-bus 与 prop 进行跨组件通信。
 
-```
-npm install vue-bus --save
-```
-
 ```js
 import Vue from 'vue';
 import VueBus from 'vue-bus';
@@ -45,7 +41,7 @@ methods: {
 }
 ```
 
-具体使用方法详见：[vue-bus]()https://github.com/yangmingshan/vue-bus
+具体使用方法详见：[vue-bus](https://github.com/yangmingshan/vue-bus)
 
 ## Project setup
 ```
