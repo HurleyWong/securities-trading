@@ -14,13 +14,14 @@
     <el-card shadow="hover" class="container">
       <el-row>
         <!-- 委托组件 -->
-
         <el-col :span="12">
           <order-widget :direction="0" />
         </el-col>
 
         <!-- 订单簿组件 -->
-        <el-col :span="12"></el-col>
+        <el-col :span="12">
+          <order-book />
+        </el-col>
       </el-row>
 
       <!-- 资金持仓的组件 -->
@@ -32,9 +33,10 @@
 <script>
 import PostList from "../components/PostList";
 import OrderWidget from "../components/OrderWidget";
+import OrderBook from "../components/OrderBook";
 
 export default {
-  components: { PostList, OrderWidget },
+  components: { PostList, OrderWidget, OrderBook },
   name: "Buy",
 };
 </script>
